@@ -3,8 +3,14 @@ import os
 from langchain_google_genai import GoogleGenerativeAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
-os.environ["GOOGLE_API_KEY"]="AIzaSyBBA1BukryY3YxXJRVAJOqlkrsWOR2v4BE"
-llm=GoogleGenerativeAI(model="models/gemini-2.0-flash",temperature=0.7)
+from dotenv import load_dotenv
+load_dotenv()
+api_key=os.getenv("google_api_key")
+
+llm=GoogleGenerativeAI(
+    model="models/gemini-2.0-flash",
+    temperature=0.7,
+    )
 prompt_template_name=PromptTemplate(
     input_variables=['language','genre','choice'],
     template="Recommend Top 10 {choice} {language} movies of {genre} genre  with release year in one line and basic info about movie in next line and cast details(hero,heroine,director and producer) in well ordered(understandable) without cast heading in next line.Display them one after another without any extra information"
