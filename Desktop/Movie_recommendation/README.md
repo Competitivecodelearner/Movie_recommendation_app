@@ -34,11 +34,13 @@ Movie-Recommendation/
 ``` bash
 git clone https://github.com/Competitivecodelearner/Movie_recommendation_app.git
 cd Movie-Recommendation
+```
+2. **To run the project**
 
-## To run the project
    streamlit run Movie_Recommendation.py
 
-```
+
+
 ## 🔗 Live Demo
 
 Check out the live app: [Click here to try it!](https://movierecommendationapp-fild2wemdknfxhqfdvgz8t.streamlit.app)
