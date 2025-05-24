@@ -10,6 +10,7 @@ api_key=os.getenv("google_api_key")
 llm=GoogleGenerativeAI(
     model="models/gemini-2.0-flash",
     temperature=0.7,
+    google_api_key=api_key
     )
 prompt_template_name=PromptTemplate(
     input_variables=['language','genre','choice'],
